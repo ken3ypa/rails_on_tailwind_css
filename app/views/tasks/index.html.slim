@@ -1,23 +1,35 @@
-h1.bg-blue-100 Listing tasks
+= render "notice"
 
-table
-  thead
-    tr
-      th Title
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @tasks.each do |task|
-      tr
-        td = task.title
-        td = task.description
-        td = link_to 'Show', task
-        td = link_to 'Edit', edit_task_path(task)
-        td = link_to 'Destroy', task, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Task', new_task_path
+h1.head-title
+  | Listing tasks
+.overflow-x-auto.bg-white.rounded-lg.shadow.overflow-y-auto.relative
+  table.table-fixed.border-collapse.w-full.whitespace-no-wrap.bg-white.table-striped.relative
+    thead
+      tr.text-left
+        th.table-header.w-1/4
+          | Title
+        th.table-header.w-1/3
+          | Description
+        th.table-header.w-auto
+        th.table-header.w-auto
+        th.table-header.w-auto
+    tbody
+      - @tasks.each do |task|
+        tr.hover:bg-yellow-50.mx-3
+          td.table-data
+            span.text-gray-700.px-6.py-3.flex.justify-center
+              = task.title
+          td.table-data
+            span.text-gray-700.px-6.py-3.flex.justify-center
+              = task.description
+          td.table-data
+            span.px-6.py-3.flex.justify-center
+              = link_to 'Show', task, class: "btn bg-green-500 hover:bg-green-700"
+          td.table-data
+            span.px-6.py-3.flex.justify-center
+              = link_to 'Edit', edit_task_path(task), class: "btn bg-blue-500 hover:bg-blue-700"
+          td.table-data
+            span.px-6.py-3.flex.justify-center
+              = button_to 'Destroy', task_path(task), method: :delete, class: "btn bg-red-500 hover:bg-red-700"
+  .foot-area
+    = link_to 'New Task', new_task_path, class: "btn bg-blue-500 hover:bg-blue-700"

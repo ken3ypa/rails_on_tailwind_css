@@ -1,15 +1,14 @@
 = form_for @task do |f|
-  - if @task.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@task.errors.count, "error")} prohibited this task from being saved:"
-      ul
-        - @task.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions = f.submit
+  .border-t.border-gray-200
+    .bg-gray-50.px-4.py-5.sm:grid.auto-cols-auto
+      .text-sm.font-medium.text-gray-500.py-3
+        = f.label :title
+      .text-sm
+        = f.text_field :title, class: "bg-white px-4 py-5 w-full"
+      .text-sm.font-medium.text-gray-500.py-3
+        = f.label :description
+      .text-sm.text-gray-900
+        = f.text_field :description, class: "bg-white px-4 py-5 w-full"
+    .foot-area
+      = link_to 'Back', tasks_path, class: "btn--back"
+      = f.submit class: "btn bg-blue-500 hover:bg-blue-700"
