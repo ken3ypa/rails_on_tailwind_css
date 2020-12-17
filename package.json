@@ -3,7 +3,10 @@
   "private": true,
   "dependencies": {
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "rails/webpacker"
+    "@rails/webpacker": "rails/webpacker",
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.2"
   },
   "version": "0.1.0",
   "devDependencies": {
