@@ -1,3 +1,39 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.btn {
+  @apply text-white px-4 py-2 rounded text-sm;
+}
+
+.btn:focus {
+  @apply outline-none;
+}
+
+.btn--back {
+  @apply text-gray-500 font-bold py-2 px-4;
+}
+
+.btn--back:hover {
+  @apply text-gray-600;
+}
+
+.table-row {
+  @apply bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-2 text-gray-600 font-bold tracking-wider uppercase text-xs;
+}
+
+.foot-area {
+  @apply block bg-gray-100 text-sm text-right py-4 px-3 rounded-b-lg;
+}
+
+.head-title {
+  @apply text-3xl py-4 border-b mb-10;
+}
+
+.table-header {
+  @apply bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-4 text-gray-600 font-bold tracking-wider uppercase text-xs;
+}
+
+.table-data {
+  @apply border-dashed border-t border-gray-200;
+}
