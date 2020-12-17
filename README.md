@@ -1,24 +1,9 @@
-# README
+# RailsOnTailwindcss
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Rails6系 × [Tailwind CSS](https://tailwindcss.com/)2系 で動かすためのサンプルアプリです
 
-Things you may want to cover:
+## バージョン情報
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby: 2.7.1
+- Rails: 6.１.0
+- Tailwind CSS: 2.0.2
