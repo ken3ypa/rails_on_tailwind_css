@@ -6,4 +6,5 @@
 
 - Ruby: 2.7.1
 - Rails: 6.1.0
+- Yarn: 1.22.5
 - Tailwind CSS: 2.0.2
